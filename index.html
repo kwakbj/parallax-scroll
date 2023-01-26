@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Scrolling Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="train.png" id="train">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>안녕하세요 저는 곽범준입니다.<br><br>감사합니다.<br><br>
+                안녕하세요 저는 곽범준입니다.<br><br>감사합니다.<br><br>
+                안녕하세요 저는 곽범준입니다.<br><br>감사합니다.<br><br>
+                안녕하세요 저는 곽범준입니다.<br><br>감사합니다.<br><br>
+                안녕하세요 저는 곽범준입니다.<br><br>감사합니다.<br><br>
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let train = document.getElementById('train');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                train.style.marginRight = value * 4 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
